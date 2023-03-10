@@ -1,7 +1,6 @@
 using System.Data.SqlClient;
 using PizzaAPI.API.Controllers;
 using System;
-using Dapper;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 namespace PizzaAPI.API.Models
