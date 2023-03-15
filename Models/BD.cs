@@ -31,16 +31,16 @@ namespace PizzaAPI.API.Models
         }
 
         public static void AgregarPizza(Pizza newPiz){
-        string sql = "INSERT INTO Pizzas VALUES (@pId, @pNombre, @pGluten, @pImporte, @pDescripcion, @pFechaCreacion, @pFoto1, @pFoto2, @pFoto3)";
+        string sql = "INSERT INTO Pizzas VALUES (@pId, @pNombre, @pGluten, @pImporte, @pDescripcion)";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             db.Execute(sql, new { pId=newPiz.Id, pNombre = newPiz.Nombre, pGluten = newPiz.LibreGluten, pImporte = newPiz.Importe, pDescripcion=newPiz.Descripcion});
         }
         }
 
         public static void EliminarPizza(int IdPizza){
-            string sql = "DELETE FROM Autos WHERE IdAuto = @pIdAuto";
+            string sql = "DELETE FROM Pizzas WHERE Id = @pId";
             using(SqlConnection db = new SqlConnection(_connectionString)){
-                db.Execute(sql, new { pIdAuto = IdAuto });
+                db.Execute(sql, new { pId = IdPizza });
             }
         }
     }
