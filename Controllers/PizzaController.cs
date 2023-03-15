@@ -36,9 +36,20 @@ namespace PizzaAPI.API.Controllers
 			
 		}
 
-		[HttpPut("{id}")]
-		public IActionResult Update(int id, Pizza pizza){
-
+		[HttpUpdate("{id}")]
+		public IActionResult Update(int id, Pizza pizza2){
+			if(id<1){
+			return BadRequest();
+			}
+			Pizza pizza1 =BD.ObtenerPizzaPorID(id);
+			if(pizza1 != null && pizza2 != null)
+			{
+				BD.ActualizarPizza(id);
+				return Ok();
+			}
+			else{
+				return NotFound();
+			}
 		}
 
 		[HttpDelete("{id}")]

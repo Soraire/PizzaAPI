@@ -44,6 +44,13 @@ namespace PizzaAPI.API.Models
                 db.Execute(sql, new { pId = IdPizza });
             }
         }
+
+        public static void ActualizarPizza(int id, Pizza pizza){
+        string sql = "UPDATE Pizzas VALUES (@pId, @pNombre, @pGluten, @pImporte, @pDescripcion)";
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            db.Execute(sql, new { pId=newPiz.Id, pNombre = newPiz.Nombre, pGluten = newPiz.LibreGluten, pImporte = newPiz.Importe, pDescripcion=newPiz.Descripcion});
+        }
+        }
     }
 }
 
