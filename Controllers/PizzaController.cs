@@ -32,11 +32,11 @@ namespace PizzaAPI.API.Controllers
 		[HttpPost]
 		public IActionResult Create(Pizza pizza){
 		BD.AgregarPizza(pizza);
-		return Created(pizza);	
+		return Created();	
 			
 		}
 
-		[HttpUpdate("{id}")]
+		[HttpPut("{id}")]
 		public IActionResult Update(int id, Pizza pizza2){
 			if(id<1){
 			return BadRequest();
