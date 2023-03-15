@@ -1,13 +1,14 @@
 using System.Data.SqlClient;
 using PizzaAPI.API.Controllers;
 using System;
+using Dapper;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 namespace PizzaAPI.API.Models
 {
     public static class BD
     {
-        private static string _connectionString =  @"Server=A-PHZ2-CIDI-010;DataBase=DAI-Pizzas;Trusted_Connection=True";
+        private static string _connectionString =  @"Server=A-PHZ2-AMI-011;DataBase=DAI-Pizzas;Trusted_Connection=True";
         public static List<Pizza> ObtenerPizza()
         {
             List<Pizza> lista = new List<Pizza>();

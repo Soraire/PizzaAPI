@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PizzaAPI.API.Models;
+using Dapper;
+using System.Data.SqlClient;
 namespace PizzaAPI.API.Controllers
 {
 	[ApiController]
@@ -12,13 +14,26 @@ namespace PizzaAPI.API.Controllers
 		}
 		
 		[HttpGet("{id}")]
-		public IActionResult GetById(int id){
-		
+		public IActionResult GetById(int id)
+		{
+		if(id<1){
+			return BadRequest();
+		}
+		Pizza pizza =BD.ObtenerPizzaPorID(id);
+		if(pizza != null)
+		{
+			return Ok(pizza);
+		}
+		else{
+			return NotFound();
+		}
 		}
 		
 		[HttpPost]
 		public IActionResult Create(Pizza pizza){
-
+		BD.AgregarPizza(pizza);
+		return Created(pizza);	
+			
 		}
 
 		[HttpPut("{id}")]
@@ -28,6 +43,19 @@ namespace PizzaAPI.API.Controllers
 
 		[HttpDelete("{id}")]
 		public IActionResult DeleteById(int id){
+		if(id<1){
+		return BadRequest();
+		}
+		Pizza pizza =BD.ObtenerPizzaPorID(id);
+		if(pizza != null)
+		{
+			BD.EliminarPizza(id);
+			return Ok();
+		}
+		else{
+			return NotFound();
+		}
+
 		
 		}
 	}
