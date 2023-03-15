@@ -1,0 +1,7 @@
+C:\Users\devandroid\Downloads\PizzaAPI-main\PizzaAPI-main\obj\Debug\net6.0\PizzaAPI.csproj.AssemblyReference.cache
+C:\Users\devandroid\Downloads\PizzaAPI-main\PizzaAPI-main\obj\Debug\net6.0\PizzaAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\devandroid\Downloads\PizzaAPI-main\PizzaAPI-main\obj\Debug\net6.0\PizzaAPI.AssemblyInfoInputs.cache
+C:\Users\devandroid\Downloads\PizzaAPI-main\PizzaAPI-main\obj\Debug\net6.0\PizzaAPI.AssemblyInfo.cs
+C:\Users\devandroid\Downloads\PizzaAPI-main\PizzaAPI-main\obj\Debug\net6.0\PizzaAPI.csproj.CoreCompileInputs.cache
+C:\Users\devandroid\Downloads\PizzaAPI-main\PizzaAPI-main\obj\Debug\net6.0\PizzaAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\devandroid\Downloads\PizzaAPI-main\PizzaAPI-main\obj\Debug\net6.0\PizzaAPI.MvcApplicationPartsAssemblyInfo.cache
